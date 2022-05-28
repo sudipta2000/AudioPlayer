@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/tracks.dart';
 
-
-class Splash extends StatefulWidget{
+class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
 
   @override
@@ -10,23 +9,22 @@ class Splash extends StatefulWidget{
 }
 
 class _SplashState extends State<Splash> {
-@override
-void initState(){
-  super.initState();
-  _navigatetohome();
+  @override
+  void initState() {
+    super.initState();
+    _navigatetohome();
+  }
 
-}
-
-_navigatetohome()async{
-  await Future.delayed(const Duration(milliseconds: 1500), () {});
-  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Tracks()));
-}
-
+  _navigatetohome() async {
+    await Future.delayed(const Duration(milliseconds: 1500), () {});
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => const Tracks()));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Center(
+      body: Center(
           child: FittedBox(
         child: Column(
           children: <Widget>[
@@ -36,6 +34,5 @@ _navigatetohome()async{
         ),
       )),
     );
-    
   }
 }
