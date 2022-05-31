@@ -29,7 +29,8 @@ class _SplashState extends State<Splash> {
         child: Column(
           children: <Widget>[
             Image.asset('assets/images/logo.png'),
-            Container(child: const Text("SOUL"), color: Colors.white38)
+            const Text("SOUL",
+            style: TextStyle(fontSize: 40,color: Colors.purple, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic))
           ],
         ),
       )),

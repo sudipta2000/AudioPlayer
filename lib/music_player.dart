@@ -74,13 +74,13 @@ class MusicPlayerState extends State<MusicPlayer> {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white10,
+        backgroundColor:const  Color.fromARGB(255, 170, 82, 185),
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
             icon: const Icon(Icons.arrow_back_ios_sharp, color: Colors.black)),
-        title: const Text("Now Playing", style: TextStyle(color: Colors.black)),
+        title: const Text("Now Playing", style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
       ),
       body: Container(
         margin: const EdgeInsets.fromLTRB(5, 40, 5, 0),
@@ -97,7 +97,7 @@ class MusicPlayerState extends State<MusicPlayer> {
             child: Text(
               widget.songInfo.displayName,
               style: const TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600),
             ),
@@ -113,8 +113,8 @@ class MusicPlayerState extends State<MusicPlayer> {
             ),
           ),
           Slider(
-            inactiveColor: Colors.black12,
-            activeColor: Colors.black38,
+            inactiveColor: Colors.grey,
+            activeColor: const Color.fromARGB(255, 170, 82, 185),
             min: minimumValue,
             max: maximumValue,
             value: currentValue > maximumValue
@@ -154,7 +154,7 @@ class MusicPlayerState extends State<MusicPlayer> {
               children: [
                 GestureDetector(
                   child: const Icon(Icons.skip_previous,
-                      color: Colors.black, size: 55),
+                      color: Colors.white, size: 55),
                   behavior: HitTestBehavior.translucent,
                   onTap: () {
                     widget.changeTrack(false);
@@ -165,7 +165,7 @@ class MusicPlayerState extends State<MusicPlayer> {
                       isPlaying
                           ? Icons.pause_circle_filled_rounded
                           : Icons.play_circle_fill_rounded,
-                      color: Colors.black,
+                      color:Colors.white,
                       size: 75),
                   behavior: HitTestBehavior.translucent,
                   onTap: () {
@@ -174,7 +174,7 @@ class MusicPlayerState extends State<MusicPlayer> {
                 ),
                 GestureDetector(
                   child: const Icon(Icons.skip_next,
-                      color: Colors.black, size: 55),
+                      color: Colors.white, size: 55),
                   behavior: HitTestBehavior.translucent,
                   onTap: () {
                     widget.changeTrack(true);

@@ -48,9 +48,9 @@ class _TracksState extends State<Tracks> {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.deepPurpleAccent,
         leading: const Icon(Icons.music_note, color: Colors.black),
-        title: const Text("SOUL", style: TextStyle(color: Colors.black)),
+        title: const Text("SOUL", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
       ),
       body: ListView.separated(
         separatorBuilder: (context, index) => const Divider(),
